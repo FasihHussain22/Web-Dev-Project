@@ -1,0 +1,16 @@
+<br><br><br><br><br><br>
+<h3 class="text-center">Account Login</h3><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <form onsubmit="return false;">
+                <input class="form-control" placeholder="User Name" name="username" required #username><br>
+                <input class="form-control" type="password" placeholder="Password" name="password" required #password>
+                <label id="label" style="color: red;">{{loginService.message}}</label><br>
+                <button class="btn btn-primary" (click)="login()" style="width: 45%;">Login</button>
+                <button class="btn btn-primary pull-right" (click)="register()" style="width: 45%;">Register</button><br>
+            </form>
+        </div>
+    </div>
+</div>

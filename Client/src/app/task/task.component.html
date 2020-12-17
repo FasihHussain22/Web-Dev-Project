@@ -1,0 +1,19 @@
+<!-- <p>{{task}}</p>
+<p>{{status}}</p>
+<button (click)="deleteTask()">Delete</button> -->
+<!-- <button (click)="updateStatus()">Update Status</button> -->
+<!-- <button *ngIf="status" (click)="updateStatus()" style="background: green;">Update Status</button>
+<button *ngIf="!status" (click)="updateStatus()" style="background: red;">Update Status</button> -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <span class="hover-cursor" [class.text-success]="status" (click)="updateStatus()">
+                <i class="fa fa-lg" [ngClass]="status?'fa-check-circle-o fa-2x':'fa-circle-thin fa-2x'"></i>
+            </span> {{task}}
+            <span class="hover-cursor text-danger pull-right" (click)="deleteTask()" style="padding-right: 15px;">
+                <i class="fa fa-trash-o fa-lg fa-2x"></i>
+            </span>
+        </div>
+    </div>
+</div><br>
+<!-- <hr> -->

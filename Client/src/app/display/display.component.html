@@ -1,0 +1,44 @@
+<!-- <p>display works!</p> -->
+<!-- <button (click)="logout()">Logout</button>
+<hr>
+<form onsubmit="return false;">
+    <input placeholder="Enter List Name" name="listName" required #listName><br>
+    <button (click)="addList(listName.value)">Add List</button><br>
+</form>
+
+<div *ngFor="let listItem of loginService.userList">
+    <app-list [listName]="listItem.listName" [listKey]="listItem.key"></app-list>
+    <div *ngFor="let task of listItem.tasks">
+        <app-task [listName]="listItem.listName" [listKey]="listItem.key" [task]="task.desc" [taskKey]="task.key" [status]="task.status"></app-task>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <form onsubmit="return false;" class="input-group">
+                <input class="form-control" placeholder="Enter List Name" name="listName" required #listName>
+                <!-- <button class="border border-light rounded fa fa-plus-circle fa-2x" (click)="addList(listName.value)" style="background: transparent;"></button><br> -->
+                <div class="input-group-addon hover-cursor" (click)="addList(listName.value)">
+                    <i class="fa fa-plus-circle fa-2x"></i>
+                </div><br>
+            </form>
+            <br><button class="btn btn-primary pull-right" (click)="logout()">Logout</button><br><br>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<div *ngFor="let listItem of loginService.userList">
+    <app-list [listName]="listItem.listName" [listKey]="listItem.key"></app-list>
+    <div *ngFor="let task of listItem.tasks">
+        <app-task [listName]="listItem.listName" [listKey]="listItem.key" [task]="task.desc" [taskKey]="task.key" [status]="task.status"></app-task>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>

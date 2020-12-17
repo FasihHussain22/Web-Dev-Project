@@ -1,0 +1,29 @@
+<!-- <p>list works!</p>
+
+<form onsubmit="return false;">
+    <input placeholder="Task" name="task" required #task><br>
+    <button (click)="addTask(task.value)">Add Task</button><br>
+    <button (click)="deleteList()">Delete List</button>
+</form> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <h2 class="text-center">{{listName}}</h2>
+            <div class="hover-cursor text-danger pull-right" (click)="deleteList()">
+                <i class="fa fa-trash-o fa-2x" style="padding-right: 15px;"></i>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <form onsubmit="return false;" class="input-group">
+                <input class="form-control" placeholder="Enter task" name="task" required #task>
+                <div class="input-group-addon hover-cursor" (click)="addTask(task.value)">
+                    <i class="fa fa-plus-circle fa-2x"></i>
+                </div>
+            </form>
+            <hr>
+        </div>
+    </div>
+</div>

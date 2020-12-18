@@ -17,13 +17,14 @@ export class DisplayComponent implements OnInit {
     if (this.loginService.loggedIn === 0){
       this.router.navigate(['']);
     }
-    // this.userList = this.loginService.userList;
   }
 
+  // logout the user
   logout(){
     this.loginService.logout();
   }
 
+  // add a new list
   addList(listName: string){
     if (listName.length != 0){
       this.loginService.addList(listName);

@@ -18,19 +18,21 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(){
-    if (this.username.nativeElement.value.length != 0 && this.password.nativeElement.value.length != 0){
+  // checks user credentials for login
+  login() {
+    if (this.username.nativeElement.value.length != 0 && this.password.nativeElement.value.length != 0) {
       this.loginService.login(this.username.nativeElement.value, this.password.nativeElement.value);
-      if (this.loginService.loggedIn === 0){
+      if (this.loginService.loggedIn === 0) {
         this.password.nativeElement.value = '';
       }
     }
   }
 
-  register(){
-    if (this.username.nativeElement.value.length != 0 && this.password.nativeElement.value.length != 0){
+  // add a new user to system
+  register() {
+    if (this.username.nativeElement.value.length != 0 && this.password.nativeElement.value.length != 0) {
       this.loginService.register(this.username.nativeElement.value, this.password.nativeElement.value);
-      if (this.loginService.loggedIn === 0){
+      if (this.loginService.loggedIn === 0) {
         this.password.nativeElement.value = '';
       }
     }

@@ -66,6 +66,7 @@ let users = [{
     }
 ];
 
+// Check user credentials
 app.post('/login-user', (req, res) => {
     let data = req.body;
     for (let i = 0; i < users.length; i++) {
@@ -78,6 +79,7 @@ app.post('/login-user', (req, res) => {
     res.send({ status: 0 }) // login denied
 });
 
+// Add a new user to system
 app.post('/register-user', (req, res) => {
     let data = req.body;
     for (let i = 0; i < users.length; i++) {
@@ -91,6 +93,7 @@ app.post('/register-user', (req, res) => {
     console.log('User Registered');
 });
 
+// Get data for a user
 app.post('/get-data', (req, res) => {
     let data = req.body;
     for (let i = 0; i < users.length; i++) {
@@ -103,6 +106,7 @@ app.post('/get-data', (req, res) => {
     res.send({ status: 0, data: [] });
 });
 
+// Add list for a user
 app.post('/add-list', (req, res) => {
     let data = req.body;
     for (let i = 0; i < users.length; i++) {
@@ -116,6 +120,7 @@ app.post('/add-list', (req, res) => {
     res.send({ status: 0 });
 });
 
+// Delete list for a user
 app.post('/delete-list', (req, res) => {
     let data = req.body;
     for (let i = 0; i < users.length; i++) {
@@ -133,6 +138,7 @@ app.post('/delete-list', (req, res) => {
     res.send({ status: 0 });
 });
 
+// Add task to the given list
 app.post('/add-task', (req, res) => {
     let data = req.body;
     for (let i = 0; i < users.length; i++) {
@@ -150,6 +156,7 @@ app.post('/add-task', (req, res) => {
     res.send({ status: 0 });
 });
 
+// Delete task from the given list
 app.post('/delete-task', (req, res) => {
     let data = req.body;
     for (let i = 0; i < users.length; i++) {
@@ -171,6 +178,7 @@ app.post('/delete-task', (req, res) => {
     res.send({ status: 0 });
 });
 
+// Update task status
 app.post('/update-task', (req, res) => {
     let data = req.body;
     for (let i = 0; i < users.length; i++) {

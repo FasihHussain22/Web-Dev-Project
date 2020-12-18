@@ -11,14 +11,15 @@ export class ListComponent implements OnInit {
 
   constructor(private loginService: LoginService, public router: Router) { }
 
-  @Input() listName: string;
-  @Input() listKey: string;
+  @Input() listName: string;  // name of the list
+  @Input() listKey: string;   // key of the list
 
   @ViewChild('task') task: ElementRef;
 
   ngOnInit(): void {
   }
 
+  // add task to the list
   addTask(task: string){
     if (task.length != 0){
       this.loginService.addTask(this.listKey, task);
@@ -26,6 +27,7 @@ export class ListComponent implements OnInit {
     }
   }
 
+  // delete list
   deleteList(){
     this.loginService.deleteList(this.listKey);
   }
